@@ -556,6 +556,53 @@ h1{
     }
 }
 
+.pizza-section {
+        margin: 80px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 20px;
+    }
+
+    .pizza-icon {
+        font-size: 100px;
+        margin-bottom: 30px;
+        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+    }
+
+    .pizza-message {
+        max-width: 600px;
+        background: var(--secondary-color);
+        padding: 40px;
+        border-radius: 25px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
+
+    .pizza-message h2 {
+        color: var(--heart-color);
+        font-size: 2.2em;
+        margin-bottom: 20px;
+    }
+
+    .pizza-message p {
+        font-size: 1.15em;
+        line-height: 1.8;
+        margin-bottom: 15px;
+    }
+
+    .pizza-message .highlight {
+        color: var(--heart-color);
+        font-weight: bold;
+    }
+
+    .pizza-footer {
+        color: var(--heart-color);
+        font-size: 1.2em !important;
+        margin-top: 25px !important;
+    }
+
 
 
 .underline{
@@ -597,3 +644,20 @@ footer{
     }
 }
 
+@media (max-width: 600px) {
+    .pizza-icon {
+        font-size: 80px;
+    }
+    
+    .pizza-message {
+        padding: 30px 25px;
+    }
+    
+    .pizza-message h2 {
+        font-size: 1.8em;
+    }
+    
+    .pizza-message p {
+        font-size: 1.05em;
+    }
+}
