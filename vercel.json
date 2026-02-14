@@ -24,6 +24,14 @@
       "dest": "/public/script.js"
     },
     {
+      "src": "/i-love-u.mp3",
+      "dest": "/public/i-love-u.mp3"
+    },
+    {
+      "src": "/fonts/(.*)",
+      "dest": "/public/fonts/$1"
+    },
+    {
       "src": "/images/(.*)",
       "dest": "/public/images/$1"
     },
