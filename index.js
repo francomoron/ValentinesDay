@@ -4,6 +4,7 @@ import 'dotenv/config'
 import path from 'path'
 import { fileURLToPath } from 'url';
 import OpenAI from "openai";
+import crypto from 'crypto';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -74,25 +75,36 @@ Responder exclusivamente en formato JSON válido, sin texto adicional fuera del 
 "footer": "Frase final poderosa y emotiva"
 }`
 
+app.use((req, res, next) => {
+  res.locals.nonce = crypto.randomBytes(16).toString('base64')
+  next()
+})
+
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      defaultSrc: ["'none'"],
-      connectSrc: ["'self'", IS_DEV ? "http://localhost:*" : "'self'"],
-      scriptSrc: IS_DEV
-        ? ["'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net"] // 'unsafe-inline' permitido en dev
-        : ["'self'", "https://cdn.jsdelivr.net"],
+      defaultSrc: ["'self'"],
+      connectSrc: ["'self'"],
+      scriptSrc: [
+        "'self'",
+        (req, res) => `'nonce-${res.locals.nonce}'`,  // ← Usar nonce
+        "https://cdn.jsdelivr.net"
+      ],
       styleSrc: ["'self'", "'unsafe-inline'"],
       imgSrc: ["'self'", "data:", "https:"],
-      mediaSrc: ["'self'", "data:", "blob:", "https:"], // <-- permitir blob/data para audio
+      mediaSrc: ["'self'", "data:", "blob:", "https:"],
+      formAction: ["'self'"]
     },
   })
-);
+)
 
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'))
+app.use(express.static('public'))
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-app.use('/', express.static('public'))
+app.get('/', (req, res) => {
+    res.render('index', { nonce: res.locals.nonce })
+})
 
 app.get('/love-letter', async(req, res) => {
     try{
@@ -115,16 +127,17 @@ app.get('/love-letter', async(req, res) => {
             console.log("Carta generada:", loveLetterData.header);
 
             console.log("OK")
+
             res.render('success', { 
                 ...loveLetterData,
                 nonce: res.locals.nonce 
             })
         }else{
-            res.sendFile(path.join(__dirname, 'public', 'error.html'))
+          res.render('error', { nonce: res.locals.nonce })
         }
     }catch(e){
         console.error(e)
-        res.sendFile(path.join(__dirname, 'public','error.html' ))
+        res.render('error', { nonce: res.locals.nonce })
     }
 })
 
