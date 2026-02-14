@@ -484,6 +484,80 @@ h1{
 
 }
 
+.gift-code{
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px auto;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+
+    & .gift-container{
+        width: 80%;
+        max-width: 500px;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    & .gift-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & svg{
+            width: 200px;
+            height: 200px;
+            fill: var(--heart-color);
+        }
+    }
+
+    & .gift-secret{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin: 40px;
+
+        & .gift-digit{
+            padding: 20px;
+            color: var(--secondary-color);
+            font-weight: bold;
+            border-radius: 10px;
+            background-color: var(--heart-color);
+        }
+    }
+
+    & .gift-instructions{
+        border-radius: 10px;
+        background-color: var(--bg-color);
+        padding: 20px;
+
+        & .gift-instructions-header{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 10px;
+            border-bottom: 1px solid #770d81;
+
+            svg{
+                fill: var(--heart-color);
+                width: 30px;
+                height: 30px;
+            }
+        }
+        span{
+            color: var(--secondary-color);
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
 .underline{
     text-decoration: underline;
     font-weight: bold;

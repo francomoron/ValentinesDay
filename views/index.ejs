@@ -11,6 +11,8 @@
 
     <main>
 
+        
+
         <section id="intro" class="greeting-container">
             <div class="greeting-text-container">
                 <h1>Feliz San Valentín!</h1>
@@ -21,33 +23,11 @@
             </div>
         </section>
 
-        <section id="next-section" class="music-container">
-            <div class="music-info">
-                <div class="music-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M532 71C539.6 77.1 544 86.3 544 96L544 400C544 444.2 501 480 448 480C395 480 352 444.2 352 400C352 355.8 395 320 448 320C459.2 320 470 321.6 480 324.6L480 207.9L256 257.7L256 464C256 508.2 213 544 160 544C107 544 64 508.2 64 464C64 419.8 107 384 160 384C171.2 384 182 385.6 192 388.6L192 160C192 145 202.4 132 217.1 128.8L505.1 64.8C514.6 62.7 524.5 65 532.1 71.1z"/></svg>
-                    <h2>Música</h2>
-                </div>
-                <p>Esta es una demostración de amor a través de la música.</p>
-             </div>
-
-             <div class="singer-container">
-                <img class="singer-img" src="/images/i-love-u-song.avif" alt="">
-                <div class="singer-info">
-                    <p class="song-name">Tanto</p>
-                    <p class="singer-name">Jessy & Joy, Luis Fonsi</p>
-                </div>
-             </div>
-
-            <div id="waveform">
-                <!-- the waveform will be rendered here -->
-            </div>
-        </section>
-
         <div class="separator">
             <span> - - - </span>
         </div>
 
-        <section class="how-much-container">
+        <section id="next-section" class="how-much-container">
             <h2>¿Querés saber cuanto <span class="underline">te amo</span>?</h2>
 
             <div class="heart-container">
@@ -122,6 +102,28 @@
 
         </section>
 
+        <section class="music-container">
+            <div class="music-info">
+                <div class="music-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M532 71C539.6 77.1 544 86.3 544 96L544 400C544 444.2 501 480 448 480C395 480 352 444.2 352 400C352 355.8 395 320 448 320C459.2 320 470 321.6 480 324.6L480 207.9L256 257.7L256 464C256 508.2 213 544 160 544C107 544 64 508.2 64 464C64 419.8 107 384 160 384C171.2 384 182 385.6 192 388.6L192 160C192 145 202.4 132 217.1 128.8L505.1 64.8C514.6 62.7 524.5 65 532.1 71.1z"/></svg>
+                    <h2>Música</h2>
+                </div>
+                <p>Esta es una demostración de amor a través de la música.</p>
+             </div>
+
+             <div class="singer-container">
+                <img class="singer-img" src="/images/i-love-u-song.avif" alt="">
+                <div class="singer-info">
+                    <p class="song-name">Tanto</p>
+                    <p class="singer-name">Jessy & Joy, Luis Fonsi</p>
+                </div>
+             </div>
+
+            <div id="waveform">
+                <!-- the waveform will be rendered here -->
+            </div>
+        </section>
+
         <div class="separator">
             <span> - - - </span>
         </div>
@@ -173,6 +175,33 @@
                 <input type="submit" value="Generar mensaje">
             </form>
             
+        </section>
+
+        <div class="separator">
+            <span> - - - </span>
+        </div>
+
+        <section class="gift-code">
+            <div class="gift-container">
+                <div class="gift-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 160L256 224L384 224L384 160C384 124.7 355.3 96 320 96C284.7 96 256 124.7 256 160zM192 224L192 160C192 89.3 249.3 32 320 32C390.7 32 448 89.3 448 160L448 224C483.3 224 512 252.7 512 288L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 288C128 252.7 156.7 224 192 224z"/></svg>
+                    <h2>Código secreto</h2>
+                </div>
+                <div class="gift-secret">
+                    <span class="gift-digit">1</span>
+                    <span class="gift-digit">5</span>
+                    <span class="gift-digit">0</span>
+                    <span class="gift-digit">2</span>
+                </div>
+                <div class="gift-instructions">
+                    <div class="gift-instructions-header">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M272 112C272 85.5 293.5 64 320 64C346.5 64 368 85.5 368 112C368 138.5 346.5 160 320 160C293.5 160 272 138.5 272 112zM224 256C224 238.3 238.3 224 256 224L320 224C337.7 224 352 238.3 352 256L352 512L384 512C401.7 512 416 526.3 416 544C416 561.7 401.7 576 384 576L256 576C238.3 576 224 561.7 224 544C224 526.3 238.3 512 256 512L288 512L288 288L256 288C238.3 288 224 273.7 224 256z"/></svg>
+                        <p>Instrucciones</p>
+                    </div>
+                    <p>Usa el código <span>1502</span> para abrir AMBOS candados del cajón.</p>
+                    <p>Ambos candados tienen la misma combinación</p>
+                </div>
+            </div>
         </section>
 
     </main>
