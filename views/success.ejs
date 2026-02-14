@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Amor</title>
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .love-letter {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 40px;
+            background: linear-gradient(135deg, #fff5f7 0%, #ffe8ec 100%);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(255, 105, 180, 0.2);
+            font-family: 'Georgia', serif;
+        }
+        
+        .letter-header {
+            text-align: center;
+            font-size: 2em;
+            color: #d63384;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(214, 51, 132, 0.1);
+        }
+        
+        .letter-body {
+            line-height: 1.8;
+            color: #333;
+            font-size: 1.1em;
+            white-space: pre-line;
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+        
+        .letter-footer {
+            text-align: right;
+            font-style: italic;
+            color: #d63384;
+            font-size: 1.2em;
+            margin-top: 40px;
+            border-top: 2px solid #ffc0cb;
+            padding-top: 20px;
+        }
+        
+        .btn-back {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #ff6b9d 0%, #c9379d 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: transform 0.3s;
+        }
+        
+        .btn-back:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+        }
+        
+        .hearts {
+            text-align: center;
+            font-size: 2em;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="love-letter">
+        <div class="hearts">💕 ✨ 💖</div>
+        
+        <div class="letter-header">
+            <%= header %>
+        </div>
+        
+        <div class="letter-body">
+            <%= body %>
+        </div>
+        
+        <div class="letter-footer">
+            <%= footer %>
+        </div>
+        
+        <div class="hearts">💖 ✨ 💕</div>
+        
+        <a href="/" class="btn-back">Volver al inicio</a>
+    </div>
+</body>
+</html>

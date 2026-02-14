@@ -1,0 +1,19 @@
+{
+  "name": "valentinesday",
+  "version": "1.0.0",
+  "description": "Valentine's Day Web Page",
+  "license": "ISC",
+  "author": "Franco Ignacio Morón",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "openai": "^6.21.0"
+  }
+}
